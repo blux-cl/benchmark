@@ -1,0 +1,7 @@
+biopython
+chembl_webresource_client
+chemspipy
+pubchempy
+libchebipy
+pandas
+numpy
