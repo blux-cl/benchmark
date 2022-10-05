@@ -12,7 +12,6 @@
 10. Formula: formula and formula source
 11. InChI: non-proprietary identifier for chemical substances that can be used in printed andelectronic data sources thus enabling easier linking of diverse data compilations. It expresses chemical structures in terms of atomic connectivity, tautomeric state, isotopes, stereochemistry and electronic charge in order to produce a sequence of machine-readable characters unique to the respective molecule
 12. InchiKey: The InChIKey is a 25-character hashed version of the full InChI, designed to allow for easy web searches of chemical compounds.
-    13. SMILES: Simplified Molecular Input Line Entry System, is a simple but comprehensive chemical line notation
 13. Outgoings: ChEBI is an ontology, and as such maintains relations between chemical entities.
 14. Incomings: Similar to getOutgoings(), getIncomings() returns a List of Relation objects stating relations in which the ChEBI entity is the object of the relationship
 15. Mass: Returns the average mass. The relative masses are calculated from tables of relative atomic masses
@@ -22,7 +21,7 @@
 18. References: Returns a list of textual references to external resources, covering references to the given ChEBI entity in resources such as BRENDA, UniProt and in patents.
 19. Parent_ID: Some ChEBI entities have subsequently been found to be duplicates. If a given entity is a duplicate, it will
     have a parent id that maps to a parent entity that is considered the primary id for a given set of duplicates.
-20. SMILES: SMILES (Simplified Molecular Input Line Entry System) is a simple but comprehensive chemical line
+20. SMILES (Simplified Molecular Input Line Entry System) is a simple but comprehensive chemical line
     notation, that specifically represents a valence model of a molecule and is widely used as a data
     exchange format.
 21. Source: Returns the source of the ChEBI entity
