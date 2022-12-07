@@ -2,8 +2,6 @@ import pandas as pd
 from chembl_webresource_client.new_client import new_client
 from libchebipy import ChebiEntity
 import pubchempy as pcp
-import numpy as np
-import json
 
 def export_chembl(id):
     molecule = new_client.molecule
@@ -213,21 +211,3 @@ def export_database(database_name, id):
         return database_df.to_dict()
     except Exception as e:
         print(e, database_name, id)
-
-if __name__ == '__main__':
-    
-    unichem = pd.read_csv("unichem_master_ids.csv")
-    
-    compound = unichem.loc[1]
-    compound_dict = {}
-    
-    for database_name, id in compound.items():
-        if (type(id) == str) or (type(id) == np.float64 and not np.isnan(id)):
-            database = export_database(database_name, id)
-            compound_dict[database_name] = database
-        else:
-            if type(id) == np.int64:
-                uci = id
-            
-        with open(f'{uci}.json', 'w') as fp:
-            json.dump(compound_dict, fp)
