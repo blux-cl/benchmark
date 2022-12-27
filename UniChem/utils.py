@@ -2,6 +2,8 @@ import pandas as pd
 from chembl_webresource_client.new_client import new_client
 from libchebipy import ChebiEntity
 import pubchempy as pcp
+from Bio.KEGG import REST
+
 
 def export_chembl(id):
     molecule = new_client.molecule
@@ -9,20 +11,43 @@ def export_chembl(id):
     df = pd.DataFrame(mols)
     return df
 
+
 def export_drugbank(id):
     pass
+
 
 def export_pdb(id):
     pass
 
+
 def export_gtopdb(id):
     pass
+
 
 def export_pubchem_dotf(id):
     pass
 
+
 def export_kegg_ligand(id):
-    pass
+    kegg_output = REST.kegg_get(id).read()
+    results = {}
+    for line in kegg_output.split('\n'):
+        splits = line.split()
+        if not line.startswith(' '):    
+            if len(splits) > 0:
+                key = splits[0]
+                value = ' '.join(splits[1:])
+                results[key] = value
+        else:
+            results[key] += ' '.join(splits)
+    df_output = (pd.DataFrame(results, index=[id])
+                    .drop("///", axis=1)
+    )
+    df_output = df_output.rename(columns=
+                                 {col: col.lower() for col in df_output.columns}
+                                 )
+    return df_output
+
 
 def export_chebi(id):
     columns = ['id', 'name', 'names', 'charge', 'comments', 'compound_origins', 'created_by', 'db_accessions',
