@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3cd3dcd1652097fa1adf0345aa67bafab211a9cfd2290b5796b14e5298e62094
-size 242
+# IDs fields
+
+* chebi_id: CHEBI
+* chembl_id: CHEMBL
+* inchi_key: CHEBI
+* KEGG
+* UNII/FDA: web
+* CASRN/ID: ChemID
+* pubchem_cid: web
+* RTECS: web (pending)
+* chemspider_id: pending
+* Diff: same name with some differences on ids
+* formula: all

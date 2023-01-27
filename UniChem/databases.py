@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cec2c1286bca991825aa6c7a3b97d2d23dee7a27496576b81a88c12eee008cd
-size 1380
+from utils import *
+
+DATABASE_DICT = {
+    'chembl': export_chembl,
+    'drugbank': export_drugbank,
+    'pdb': export_pdb,
+    'gtopdb': export_gtopdb,
+    'pubchem_dotf': export_pubchem_dotf,
+    'kegg_ligand': export_kegg_ligand,
+    'chebi': export_chebi,
+    'nih_ncc': export_nih_ncc,
+    'zinc': export_zinc,
+    'emolecules': export_emolecules,
+    'atlas': export_atlas,
+    'fdasrs': export_fdasrs,
+    'surechembl': export_surechembl,
+    'pharmgkb': export_pharmgkb,
+    'hmdb': export_hmdb,
+    'selleck': export_selleck,
+    'pubchem_tpharma': export_pubchem_tpharma,
+    'pubchem': export_pubchem,
+    'mcule': export_mcule,
+    'nmrshiftdb2': export_nmrshiftdb2,
+    'lincs': export_lincs,
+    'actor': export_actor,
+    'recon': export_recon,
+    'molport': export_molport,
+    'nikkaji': export_nikkaji,
+    'bindingdb': export_bindingdb,
+    'comptox': export_comptox,
+    'lipidmaps': export_lipidmaps,
+    'drugcentral': export_drugcentral,
+    'carotenoiddb': export_carotenoiddb,
+    'metabolights': export_metabolights,
+    'brenda': export_brenda,
+    'rhea': export_rhea,
+    'chemicalbook': export_chemicalbook,
+    'swisslipids': export_swisslipids,
+    'dailymed': export_dailymed,
+    'clinicaltrials': export_clinicaltrials,
+    'rxnorm': export_rxnorm,
+    'MedChemExpress': export_MedChemExpress,
+    'probes_and_drugs': export_probes_and_drugs
+}

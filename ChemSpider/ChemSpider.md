@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5443514257900b6e1612ed881057b3012ace2992caf9e5b4c8a53235e740c19b
-size 219
+
+# ChemSpider fields
+
+1. id
+2. smiles
+3. formula
+4. averageMass
+5. molecularWeight
+6. monoisotopicMass
+7. nominalMass
+8. commonName
+9. referenceCount
+10. dataSourceCount
+11. pubMedCount
+12. rscCount
+13. mol2D
+14. mol3D

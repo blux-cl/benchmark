@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:461dc2cd5f8099097e1b2857db6b837d076b7818fa9d7fabe8376a0f5573544f
-size 79
+biopython
+chembl_webresource_client
+chemspipy
+pubchempy
+libchebipy
+pandas
+numpy

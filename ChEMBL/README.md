@@ -1,3 +1,64 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4f1654e2c252804352bd2c479456ef0a42875a88c53a0d669d2bb55e1f74884a
-size 1148
+# ChEMBL fields
+
+
+1. atc_classifications
+2. availability_type
+3. biotherapeutic
+4. black_box_warning
+5. chebi_par_id
+6. chirality
+7. cross_references
+8. dosed_ingredient
+9. first_approval
+10. first_in_class
+11. helm_notation
+12. indication_class
+13. norganic_flag
+14. max_phase
+15. molecule_chembl_id
+16. molecule_hierarchy
+17. molecule_properties:
+
+    1. alogp
+    2. aromatic_rings
+    3. cx_logd
+    4. cx_logp
+    5. cx_most_apka
+    6. cx_most_bpka
+    7. full_molformula
+    8. full_mwt
+    9. hba
+    10. hba_lipinski
+    11. hbd
+    12. hbd_lipinski
+    13. heavy_atoms
+    14. molecular_species
+    15. mw_freebase
+    16. mw_monoisotopic
+    17. num_lipinski_ro5_violations
+    18. num_ro5_violations
+    19. psa
+    20. qed_weighted
+    21. ro3_pass
+    22. rtb
+18. molecule_structures
+19. molecule_synonyms
+20. molecule_type
+21. natural_product
+22. oral
+23. parenteral
+24. polymer_flag
+25. pref_name
+26. prodrug
+27. structure_type
+28. therapeutic_flag
+29. topical
+30. usan_stem
+31. usan_stem_definition
+32. usan_substem
+33. usan_year
+34. withdrawn_class
+35. withdrawn_country
+36. withdrawn_flag
+37. withdrawn_reason
+38. withdrawn_year
