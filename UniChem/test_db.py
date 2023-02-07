@@ -1,4 +1,5 @@
 from utils import export_database
+import json
 
 if __name__ == '__main__':
     #database = 'zinc'
@@ -11,4 +12,11 @@ if __name__ == '__main__':
     #id = ''
     #database = 'nikkaji'
     #id = ''
-    export_database(database, id)
+    database_name = 'chebi'
+    id = '3612'
+    database = export_database(database_name, id)
+
+    compound_dict = {}
+    compound_dict['chebi'] = database
+    with open(f"generated_json/test.json", 'w') as fp:
+        json.dump(compound_dict, fp)
