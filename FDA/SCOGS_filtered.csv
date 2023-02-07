@@ -1,0 +1,382 @@
+cas_rn,substance,report_num,syns,conclusion
+9000-01-5,Gum Arabic,1,acacia gum,2
+128-37-0,Butylated Hydroxytoluene (BHT),2,BHT,3
+9000-40-2,Carob Bean Gum,3,,2
+9000-65-1,Gum Tragacanth,4,,2
+9000-36-6,Sterculia Gum (karaya gum),5,,2
+9000-07-1,Carrageenan,6,,3
+532-32-1,Sodium Benzoate,7,,1
+65-85-0,Benzoic Acid,7,,1
+94-13-3,Propyl Paraben,8,propyl p-hydroxybenzoate,1
+99-76-3,Methyl Paraben,8,methyl p-hydroxybenzoate,1
+50-70-4,Sorbitol,9,,1
+69-65-8,Mannitol,10,,1
+121-79-9,Propyl Gallate,11,,1
+9000-28-6,Gum Ghatti,12,,2
+9000-30-0,Guar Gum,13,,2
+8014-29-7,Oil of Rue,14,,2
+7446-09-5,Sulfur dioxide,15,,2
+7757-83-7,Sodium sulfite,15,,2
+7681-57-4,Sodium metabisulfite,15,,2
+7631-90-5,Sodium bisulfite,15,,2
+16731-55-8,Potassium metabisulfite,15,,2
+57-06-7,Mustard and Oil of Mustard (Brown and Yellow),16,,1
+2086-86-4,p-Hydroxybenzyl isothiocyanate,16,4-hydroxybenzyl isothiocyanate; 4-(thioisocyanatomethyl)phenol,1
+57-06-7,Allyl isothiocyanate,16,3-isothiocyanato-1-propene,1
+8000-78-0,Garlic and Oil of Garlic,17,,1
+977051-44-7;<br /> 977051-14-1,Nutmeg and Mace,18,,3
+8000-34-8,Clove Stem Oil,19,,1
+8000-34-8,Clove Leaf Oil,19,,1
+977017-85-8,Clove Bud Oleoresin,19,,1
+8000-34-8,Clove Bud Oil,19,,1
+84961-50-2,Clove Bud Extract,19,,1
+8028-89-5,Caramel,20,,1
+7446-20-0,Zinc sulfate,21,,2
+1314-13-2,Zinc oxide,21,,2
+7646-85-7,Zinc chloride,21,,2
+3486-35-9,Zinc carbonate,21,,2
+557-34-6,Zinc acetate,21,,2
+8006-75-5,Indian Dill Seed,22,dill oils,1
+9002-18-0,Agar-agar,23,,2
+9005-38-3,Sodium alginate,24,,2
+9005-37-2,Propylene glycol alginate,24,,2
+9005-36-1,Potassium alginate,24,,2
+9005-35-0,Calcium alginate,24,,2
+9005-34-9,Ammonium alginate,24,,2
+9004-32-4,Sodium Carboxymethyl cellulose,25,,1
+9004-67-5,Methylcellulose,25,,2
+9004-65-3,Hydroxypropylmethyl cellulose,25,,1
+9004-57-3,Ethyl cellulose (packaging),25,,1
+977005-28-9,"Cellulose, microcrystalline",25,,1
+9004-35-7,Cellulose acetate(packaging),25,,1
+9004-34-6,Cellulose,25,,1
+9000-11-7,Carboxymethyl cellulose (packaging),25,,1
+533-96-0,Sodium sesquicarbonate,26,,1
+497-19-8,Sodium carbonate,26,,1
+144-55-8,Sodium bicarbonate,26,,1
+584-08-7,Potassium carbonate,26,,1
+298-14-6,Potassium bicarbonate,26,,1
+471-34-1,Calcium carbonate,26,,1
+1323-39-3,Propylene glycol monostearate,27,,1
+57-55-6,Propylene glycol,27,,1
+1405-86-3,Licorice,28,,2
+53956-04-0,Ammoniated Glycyrrhizin,28,,2
+68916-91-6,Glycyrrhiza,28,licorice extract,2
+124-07-2,Caprylic Acid,29,octanoic acid,1
+56-81-5,Glycerin and Glycerides,30,,1
+7772-99-8,Stannous Chloride,31,tin(II) chloride,1
+7758-29-4,Sodium tripolyphosphate,32,,1
+7785-84-4,Sodium trimetaphosphate,32,,1
+14986-84-6,Sodium tetraphosphate,32,,1
+68915-31-1-2,Sodium tetrametaphosphate,32,,1
+7722-88-5,"Sodium pyrophosphate, tetrabasic",32,,1
+10361-89-4,Sodium phosphate tribasic,32,,1
+7558-80-7,Sodium phosphate monobasic,32,,1
+10140-65-5,Sodium phosphate dibasic,32,,1
+50813-16-6,Sodium metaphosphate,32,,1
+68915-31-1,Sodium hexametaphosphate,32,,1
+7758-16-9,Sodium acid pyrophosphate,32,,1
+13845-36-8,Potassium tripolyphosphate,32,,1
+7320-34-5,Potassium pyrophosphate,32,,1
+7790-53-6,Potassium polymetaphosphate,32,,1
+7778-53-2,Potassium phosphate tribasic,32,,1
+7778-77-0,Potassium phosphate monobasic,32,,1
+7758-11-4,Potassium phosphate dibasic,32,,1
+7664-38-2,Phosphoric acid,32,,1
+7790-76-3,Calcium pyrophosphate,32,,1
+12167-74-7,Calcium phosphate tribasic,32,,1
+10031-30-8,Calcium phosphate monobasic,32,,1
+7757-93-9,Calcium phosphate dibasic,32,,1
+10102-76-8,Calcium hexametaphosphate,32,,1
+7722-76-1,Ammonium phosphate monobasic (Report 32),32,,1
+7783-28-0,Ammonium phosphate dibasic (Report 32),32,,1
+7664-93-9,Sulfuric Acid,33,,1
+7783-20-2,Ammonium sulfate,34,,1
+7722-76-1,Ammonium phosphate monobasic (Report 34),34,,1
+7783-28-0,Ammonium phosphate dibasic (Report 34),34,,1
+1336-21-6,Ammonium hydroxide,34,,1
+12125-02-9,Ammonium chloride,34,,1
+8000-73-5,Ammonium carbonate,34,,1
+1066-33-7,Ammonium bicarbonate,34,,1
+1332-96-3,Sodium ferricitropyrophosphate,35,"iron(III) pyrophosphate, soluble",5
+15708-41-5,Sodium ferric EDTA,35,iron(III) sodium ethylenediaminetetraacetate; monosodium iron EDTA,5
+7439-89-6,Reduced iron (packaging),35,,2
+7439-89-6,Reduced iron,35,iron,2
+7439-89-6,"Iron, elemental (packaging)",35,,1
+61788-81-6,Iron tallate (packaging),35,"tall oil fatty acids, iron salts",1
+977125-47-5,Iron polyvinylpyrrolidone,35,iron povidone,5
+977009-72-5,Iron peptonate,35,"iron, peptonized",5
+1332-37-2,Iron oxides (packaging),35,iron oxides,1
+1338-14-3,Iron naphthenate,35,"naphthenic acids, iron salts",5
+7779-63-7,Iron linoleate (packaging),35,"iron 9,12-octadecadienoate, (Z,Z)-",1
+6535-20-2,Iron caprylate (packaging),35,iron octanoate,1
+7720-78-7,Ferrous sulfate (packaging),35,iron(II) sulfate,1
+7720-78-7,Ferrous sulfate,35,iron(II) sulfate,2
+5905-52-2,Ferrous lactate,35,iron(II) lactate,2
+6047-12-7,Ferrous gluconate,35,iron(II) gluconate,2
+141-01-5,Ferrous fumarate,35,iron(II) fumarate,2
+23383-11-1,Ferrous citrate,35,iron(II) citrate,2
+563-71-3,Ferrous carbonate,35,iron(II) carbonate,2
+24808-52-4,Ferrous ascorbate,35,iron(II) ascorbate,2
+10028-22-5,Ferric sulfate (packaging),35,iron(III) sulfate,1
+10045-87-1,Ferric sodium pyrophosphate,35,iron(III) sodium pyrophosphate,5
+10058-44-3,Ferric pyrophosphate,35,iron(III) pyrophosphate,2
+10045-86-0,Ferric phosphate,35,iron(III) phosphate,2
+1309-37-1,Ferric oxide (packaging),35,iron(III) oxide,1
+1309-37-1,Ferric oxide,35,iron(III) oxide,5
+2338-05-8,Ferric citrate,35,iron(III) citrate,2
+7705-08-0,Ferric chloride (packaging),35,iron(III) chloride,1
+1185-57-5,Ferric ammonium citrate,35,ammonium iron(III) citrate,2
+7439-89-6,Electrolytic Iron (packaging),35,,2
+7439-89-6,Electrolytic Iron,35,,2
+7439-89-6,Carbonyl Iron (packaging),35,,2
+7439-89-6,Carbonyl Iron,35,,2
+1406-66-2,Tocopherols,36,,1
+58-95-7,alpha-Tocopherol acetate,36,alpha-tocopheryl acetate,1
+977007-74-1,Red algae,38,,1
+977146-32-9,Brown algae,38,,1
+7681-11-0,Potassium iodide,39,,1
+7758-05-6,Potassium iodate,39,,1
+7789-80-2,Calcium iodate,39,,1
+977139-78-8,Pulps (packaging),40,,1
+499-12-7,Aconitic Acid,41,,1
+67-48-1,Choline Chloride,42,,1
+87-67-2,Choline Bitartrate,42,,1
+11138-49-1,Sodium phosphoaluminate (packaging),43,,1
+7785-88-8,"Sodium aluminum phosphate, basic",43,,1
+7785-88-8,"Sodium aluminum phosphate, acidic",43,,1
+11138-49-1,Sodium aluminate (packaging),43,,1
+10043-01-3,Aluminum sulfate,43,,1
+7784-28-3,Aluminum sodium sulfate,43,,1
+7784-24-9,Aluminum potassium sulfate,43,,1
+555-35-1,Aluminum palmitate (packaging),43,,1
+688-37-9,Aluminum oleate (packaging),43,,1
+21645-51-2,Aluminum hydroxide,43,,1
+7784-26-1,Aluminum ammonium sulfate,43,,1
+81-24-3,Taurocholic acid,44,,1
+8008-63-7,Ox bile extract,44,,1
+475-31-0,Glycocholic acid,44,,1
+83-44-3,Desoxycholic acid,44,,1
+81-25-4,Cholic acid,44,,1
+3615-82-5,Calcium phytate,45,,1
+299-28-5,Calcium gluconate,45,,1
+10035-04-8,Calcium chloride,45,,1
+62-54-4,Calcium acetate,45,,1
+8015-86-9,Carnauba wax,47,,5
+1401-55-4,Tannic acid (hydrolyzable gallotannins),48,,2
+3615-56-3,Sorbose (packaging),49,,1
+57-50-1,Invert Sugar,50,,2
+8029-43-4,Corn Syrup,50,,2
+50-99-7,Corn Sugar (Dextrose),50,,2
+87-89-8,Inositol,51,,1
+10102-17-7,Sodium thiosulfate,52,,1
+110-15-6,Succinic acid,53,,1
+61789-97-7,Tallow (packaging),54,,1
+57-11-4,Stearic acid (packaging),54,,1
+61789-97-7,Hydrogenated tallow (packaging),54,,1
+1592-23-0,Calcium stearate,54,,1
+25013-16-5,Butylated Hydroxyanisole (BHA),55,,3
+97-67-6,L-Malic acid,56,,1
+6915-15-7,Malic acid,56,,1
+110-44-1,Sorbic acid,57,,1
+7757-81-5,Sodium sorbate,57,,1
+24634-61-5,Potassium sorbate,57,,1
+7492-55-9,Calcium sorbate,57,,1
+9000-70-8,Gelatin,58,,1
+134-03-2,Sodium L-ascorbate,59,,1
+6381-77-7,Sodium erythorbate (sodium D-isoascorbate),59,,1
+89-65-6,Erythorbic acid (D-isoascorbic acid),59,,1
+5743-28-2,Calcium L-ascorbate,59,,1
+137-66-6,Ascorbyl palmitate (palmitoyl L-ascorbic),59,,1
+50-81-7,L-Ascorbic acid,59,,1
+10034-99-8,Magnesium sulfate,60,,1
+557-04-0,Magnesium stearate,60,,1
+7757-87-1,"Magnesium phosphate, tribasic",60,,1
+7782-75-4,"Magnesium phosphate, dibasic",60,,1
+1309-48-4,Magnesium oxide,60,,1
+1309-42-8,Magnesium hydroxide,60,,1
+7786-30-3,Magnesium chloride,60,,1
+39409-82-0,Magnesium carbonate,60,,1
+12168-85-3,Tricalcium silicate,61,,1
+14807-96-6,Talc (basic magnesium silicate),61,,1
+1344-09-8,Sodium silicate,61,,1
+1344-01-0,Sodium calcium aluminosilicate,61,,1
+1344-00-9,Sodium aluminosilicate,61,,1
+14808-60-7,Silicon dioxides,61,,1
+977052-02-0,Silica aerogel,61,,1
+1312-76-1,Potassium silicate,61,,1
+93763-70-3,Perlite (filter aid),61,,1
+1343-88-0,Magnesium silicate,61,,1
+61790-53-2,Diatomaceous earth (filter aid),61,,1
+1344-95-2,Calcium silicate,61,,1
+1327-39-5,Aluminum calcium silicate,61,,1
+5329-14-6,Sulfamic acid (packaging),62,,1
+7779-86-4,Zinc hydrosulfite (packaging),63,,1
+7775-14-6,Sodium hydrosulfite (packaging),63,,1
+9000-29-7,Gum guaiac,64,,1
+8002-03-7,Peanut oil (packaging),65,,1
+112-80-1,Oleic acid (packaging),65,,1
+60-33-3,Linoleic acid,65,,1
+8001-31-8,Coconut oil (packaging),65,,1
+8016-13-5,"Fish oil, hydrogenated (packaging)",66,,1
+7785-87-7,Manganous sulfate,67,manganese(II) sulfate,5
+1317-35-7,Manganous oxide,67,,5
+6485-39-8,Manganous gluconate,67,manganese gluconate,5
+10024-66-5,Manganous citrate,67,manganese citrate,5
+7773-01-5,Manganous chloride,67,manganese dichloride,5
+8002-26-4,Tall oil (packaging),68,,1
+57-50-1,Sucrose,69,,2
+8016-70-4,Hydrogenated soybean oil,70,,1
+141-53-7,Sodium formate (packaging),71,,1
+64-18-6,Formic acid (packaging),71,,1
+109-94-4,Ethyl formate,71,,1
+1305-78-8,Calcium oxide,72,,1
+1305-62-0,Calcium hydroxide,72,,1
+7681-53-0,Sodium hypophosphite,73,,1
+7782-87-8,Potassium hypophosphite,73,,1
+10043-84-2,Manganous hypophosphite,73,manganese(II) hypophosphite,1
+7789-79-9,Calcium hypophosphite,73,,1
+1319-70-6,Potassium glycerophosphate,74,,1
+1320-46-3,Manganese glycerophosphate,74,,1
+927-20-8,Magnesium glycerophosphate (packaging),74,,1
+27214-00-2,Calcium glycerophosphate (packaging),74,,1
+27214-00-2,Calcium glycerophosphate,74,,1
+9004-53-9,Corn dextrins (packaging),75,,1
+9004-53-9,Dextrins,75,,1
+9042-08-4,Rennet,76,,1
+9001-73-4,Papain,77,,1
+4468-02-4,Zinc gluconate,78,,1
+527-07-1,Sodium gluconate,78,,1
+299-27-4,Potassium gluconate,78,,1
+3632-91-5,Magnesium gluconate,78,,1
+111-17-1,Thiodipropionic acid,79,,2
+137-40-6,Sodium propionate,79,,1
+79-09-4,Propionic acid,79,,1
+123-28-4,Dilauryl thiodipropionate,79,,2
+4075-81-4,Calcium propionate,79,,1
+124-04-9,Adipic acid,80,hexanedioic acid,1
+9046-40-6,Pectinic acid,81,,1
+9005-59-8,Pectinates,81,,1
+There is no ID Code,"Pectin, low acid",81,,1
+9000-69-5,"Pectin, high ester",81,,1
+56645-02-4,"Pectin, amidated",81,,1
+126-96-5,Sodium diacetate,82,,1
+977127-84-6,Sodium acetate,82,,1
+64-19-7,Acetic acid,82,,1
+9004-54-0,Dextran,83,,2
+77-93-0,Triethyl citrate,84,,1
+1337-33-3,Stearyl citrate,84,,1
+68-04-2,Sodium citrate,84,,1
+6100-05-6,Potassium citrate,84,,1
+39413-05-3,Isopropyl citrate,84,,1
+77-92-9,Citric acid,84,,1
+813-94-5,Calcium citrate,84,,1
+7632-50-0,Ammonium citrate,84,,1
+1310-73-2,Sodium hydroxide,85,,1
+1310-58-3,Potassium hydroxide,85,,1
+408-35-5,Sodium palmitate (packaging),86,,1
+143-19-1,Sodium oleate (packaging),86,,1
+977000-79-5,Corn silk,87,,5
+9003-21-8,"Methyl acrylate, polymeric (packaging)",88,"poly(methyl acrylate), polymethyl acrylate",1
+96-33-3,"Methyl acrylate, monomeric (packaging)",88,,1
+9003-32-1,"Ethyl acrylate, polymeric (packaging)",88,"poly(ethyl acrylate), polyethyl acrylate",1
+140-88-5,"Ethyl acrylate, monomeric (packaging)",88,,1
+58-08-2,Caffeine,89,,"3,4"
+1332-58-7,Clay (kaolin) (packaging),90,,1
+1302-78-9,Bentonite,90,,1
+8016-28-2,Lard oil (packaging),91,,1
+61789-99-9,Lard (packaging),91,,1
+58-85-5,Biotin,92,,1
+867-81-2,D- or DL- Sodium pantothenate,93,,1
+81-13-0,D-Pantothenyl alcohol,93,,1
+137-08-6,D- or DL- Calcium pantothenate,93,,1
+977019-27-4,Starter distillate,94,,1
+431-03-8,Diacetyl,94,,1
+67-97-0,Vitamin D3 (cholecalciferol),95,,2
+50-14-6,Vitamin D2 (ergocalciferol),95,,2
+9005-46-3,Sodium caseinate,96,,1
+9000-71-9,Casein,96,,1
+9005-43-0,Calcium caseinate,96,,1
+7440-02-0,Nickel (elemental),97,,1
+7681-65-4,Cuprous iodide,98,copper(1+) iodide,1
+7758-98-7,Copper (cupric) sulfate,98,"copper(2+) sulfate, cupric sulfate",1
+7440-50-8,Copper (cupric) gluconate,98,"copper(2+) gluconate, cupric gluconate",1
+7647-01-0,Hydrochloric acid,99,,1
+58-56-0,Pyridoxine hydrochloride,100,,1
+65-23-6,Pyridoxine,100,,1
+977076-84-8,Soy protein isolate,101,,1
+7647-14-5,Sodium chloride,102,,"1 (dry food packaging),  4 (direct additive)"
+7447-40-7,Potassium chloride,102,,1
+57-13-6,Urea,103,,1
+68-19-9,Vitamin B12 (cyanocobalamin),104,,1
+92128-87-5,"Lecithin, hydrogen peroxide bleached",106,,1
+8002-43-5,Lecithin,106,,1
+87-69-4,L(+)-tartaric acid,107,,1
+868-18-8,L(+)-sodium tartrate,107,,1
+304-59-6,L(+)-sodium potassium tartrate,107,,1
+868-14-4,L(+)-potassium acid tartrate,107,,1
+98-92-0,Niacinamide (nicotinamide),108,,1
+59-67-6,Niacin (nicotinic acid),108,,1
+532-43-4,Thiamine mononitrate,109,,1
+67-03-8,Thiamine hydrochloride,109,,1
+7235-40-7,Carotene (beta-carotene),111,,1
+7440-59-7,Helium gas,112,,1
+7722-84-1,Hydrogen peroxide,113,,2
+146-17-8,Riboflavin-5'-phosphate,114,,1
+83-88-5,Riboflavin,114,,1
+977052-26-8,Wheat Starch,115,,1
+977050-52-4,Waxy Maize Starch,115,"cornstarch, waxy",1
+977002-81-5,Tapioca Starch,115,,1
+977043-59-6,Succinyl Distarch Glycerol,115,,4
+977170-89-0,"Starch, Sodium Hypochlorite oxidized",115,,3
+37231-92-8,Starch Sodium Succinate,115,,3
+66829-29-6,Starch Sodium Octenyl Succinate,115,,3
+9087-61-0,Starch Aluminum Octenyl Succinate,115,,3
+9045-28-7,Starch Acetate,115,,2
+977102-48-9,Sodium Hydroxide Gelatinized Starch,115,"starch, gelatinized",5
+977000-08-0,Rice Starch,115,,1
+977050-93-3,Pregelatinized starch,115,,1
+977000-07-9,Potato starch,115,,1
+977043-58-5,Phosphated Distarch Phosphate,115,,2
+11120-02-8,Monostarch Phosphate,115,,2
+977027-92-1,Milo Starch,115,grain sorghum starch,1
+68412-86-2,"Hydroxypropyl Starch, oxidized",115,,3
+9049-76-7,Hydroxypropyl Starch,115,,3
+53124-00-8,Hydroxypropyl Distarch Phosphate,115,,3
+59419-60-2,Hydroxypropyl Distarch Glycerol,115,,4
+977050-51-3,High Amylose Cornstarch,115,,1
+55963-33-2,Distarch Phosphate,115,,2
+977043-57-4,Distarch Oxypropanol,115,,3
+58944-89-1,Distarch Glycerol,115,,4
+977050-51-3,Cornstarch,115,,1
+977075-42-5,Bleached Starch,115,,1
+977000-09-1,Arrowroot Starch,115,,1
+65996-63-6,Acid Modified Starch,115,,1
+977120-10-7,Acetylated Distarch Oxypropanol,115,,3
+68130-14-3,Acetylated Distarch Phosphate,115,,2
+53123-84-5,Acetylated Distarch Glycerol,115,,4
+63798-35-6,Acetylated Distarch Adipate,115,,2
+10326-41-7,D(-)-Lactic acid,116,,"1, 4"
+598-82-3,Lactic acid,116,,"1, 4"
+79-33-4,L(+)-lactic acid,116,,1
+28305-25-1,L(+)-calcium lactate,116,,1
+814-80-2,Calcium Lactate,116,,1
+124-38-9,Carbon dioxide,117,,1
+79-81-2,Vitamin A palmitate,118,,2
+127-47-9,Vitamin A acetate,118,,2
+68-26-8,Vitamin A,118,,2
+142-47-2,Monosodium L-glutamate,37a,MSG,2
+19473-49-5,Monopotassium L-glutamate,37a,,2
+7558-63-6,Monoammonium L-glutamate,37a,,2
+138-15-8,L-Glutamic acid hydrochloride,37a,,2
+56-86-0,L-Glutamic acid,37a,,2
+977046-75-5,Yeast autolyzates,37b,,1
+8031-68-3,Soy sauces,37b,,1
+There is no ID Code,Enzymatically hydrolyzed protein,37b,,1
+There is no ID Code,Acid hydrolyzed proteins,37b,,1
+9000-71-9,Enzymatically hydrolyzed casein,37b,,1
+8006-40-4,Beeswax (yellow or white),46a,,1
+8001-39-6,Japan wax (packaging),46b,,5
+7439-89-6,Iron - Report on Clinical Research Protocols to Elucidate The Possible Hazards of Increased Iron Enrichment of Cereal Products,none assigned by NTIS,,There is no conclusion type.
+7439-89-6,Iron - Report on Bioavailability and Utilization of Iron,PB 224 122/AS,,There is no conclusion type.
+7439-89-6,Dietary Iron,PB-218 836,,There is no conclusion type.
