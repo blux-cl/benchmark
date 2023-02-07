@@ -3,6 +3,11 @@ from chembl_webresource_client.new_client import new_client
 from libchebipy import ChebiEntity
 import pubchempy as pcp
 from Bio.KEGG import REST
+import logging
+logging.basicConfig(filename='logs/utils.log',
+                    filemode='a',
+                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                    datefmt='%H:%M:%S', level=logging.DEBUG)
 
 
 def export_chembl(id):
@@ -33,7 +38,7 @@ def export_kegg_ligand(id):
     results = {}
     for line in kegg_output.split('\n'):
         splits = line.split()
-        if not line.startswith(' '):    
+        if not line.startswith(' '):
             if len(splits) > 0:
                 key = splits[0]
                 value = ' '.join(splits[1:])
@@ -41,154 +46,199 @@ def export_kegg_ligand(id):
         else:
             results[key] += ' '.join(splits)
     df_output = (pd.DataFrame(results, index=[id])
-                    .drop("///", axis=1)
-    )
-    df_output = df_output.rename(columns=
-                                 {col: col.lower() for col in df_output.columns}
+                 .drop("///", axis=1)
+                 )
+    df_output = df_output.rename(columns={col: col.lower()
+                                          for col in df_output.columns}
                                  )
     return df_output
 
 
 def export_chebi(id):
+    print(id)
     columns = ['id', 'name', 'names', 'charge', 'comments', 'compound_origins', 'created_by', 'db_accessions',
-        'definition', 'formula', 'formulae', 'inchi', 'inchi_key', 'incomings', 'mass',
-        'modified_on', 'mol', 'outgoings', 'references', 'parent_id',
-        'smiles', 'source', 'stars'] 
+               'definition', 'formula', 'formulae', 'inchi', 'inchi_key', 'incomings', 'mass',
+               'modified_on', 'mol', 'outgoings', 'references', 'parent_id',
+               'smiles', 'source', 'stars']
 
-    df = pd.DataFrame([], columns =columns)
+    df = pd.DataFrame([], columns=columns)
     if isinstance(id, float):
         id = str(int(id))
-    if isinstance(id, int):
-        id = str(id)
     chebi_entity = ChebiEntity(chebi_id=id)
     name = chebi_entity.get_name()
     names = chebi_entity.get_names()
+    names = [{"name": n.get_name(), "type": n.get_type(
+    ), "source": n.get_source(), "language": n.get_language()} for n in names]
     charge = chebi_entity.get_charge()
     comments = chebi_entity.get_comments()
     compound_origins = chebi_entity.get_compound_origins()
     created_by = chebi_entity.get_created_by()
     db_accessions = chebi_entity.get_database_accessions()
+    db_accessions = [{"type": d.get_type(), "accession_number": d.get_accession_number(
+    ), "source": d.get_source()} for d in db_accessions]
     definition = chebi_entity.get_definition()
     formula = chebi_entity.get_formula()
     formulae = chebi_entity.get_formulae()
+    formulae = [{"formula": f.get_formula(), "source": f.get_source()}
+                for f in formulae]
     inchi = chebi_entity.get_inchi()
     inchi_key = chebi_entity.get_inchi_key()
     incomings = chebi_entity.get_incomings()
+    incomings = [{"type": i.get_type(), "target_chebi_id": i.get_target_chebi_id(
+    ), "status": i.__dict__['_Relation__status']} for i in incomings]
     mass = chebi_entity.get_mass()
-    modified_on = chebi_entity.get_modified_on()
+    modified_on = chebi_entity.get_modified_on().strftime("%m/%d/%Y")
     mol = chebi_entity.get_mol()
     outgoings = chebi_entity.get_outgoings()
+    outgoings = [{"type": o.get_type(), "target_chebi_id": o.get_target_chebi_id(
+    ), "status": o.__dict__['_Relation__status']} for o in outgoings]
     references = chebi_entity.get_references()
+    references = [{"reference_id": r.get_reference_id(), "reference_db_name": r.get__reference_db_name(
+    ), "location_in_ref": r.get_location_in_ref(), "reference_name": r.get_reference_name()} for r in references]
     parent_id = chebi_entity.get_parent_id()
     smiles = chebi_entity.get_smiles()
     source = chebi_entity.get_source()
     stars = chebi_entity.get_star()
     row = [id, name, names, charge, comments, compound_origins, created_by, db_accessions, definition,
-    formula, formulae, inchi, inchi_key, incomings, mass, modified_on, mol, outgoings,
-    references, parent_id, smiles, source, stars]
+           formula, formulae, inchi, inchi_key, incomings, mass, modified_on, mol, outgoings,
+           references, parent_id, smiles, source, stars]
     df.loc[len(df)] = row
     return df
+
 
 def export_nih_ncc(id):
     pass
 
+
 def export_zinc(id):
     pass
+
 
 def export_emolecules(id):
     pass
 
+
 def export_atlas(id):
     pass
+
 
 def export_fdasrs(id):
     pass
 
+
 def export_surechembl(id):
     pass
+
 
 def export_pharmgkb(id):
     pass
 
+
 def export_hmdb(id):
     pass
+
 
 def export_selleck(id):
     pass
 
+
 def export_pubchem_tpharma(id):
     pass
+
 
 def export_pubchem(id):
     c = pcp.Compound.from_cid(int(id))
     df = pcp.compounds_to_frame(c)
     return df
 
+
 def export_mcule(id):
     pass
+
 
 def export_nmrshiftdb2(id):
     pass
 
+
 def export_lincs(id):
     pass
+
 
 def export_actor(id):
     pass
 
+
 def export_recon(id):
     pass
+
 
 def export_molport(id):
     pass
 
+
 def export_nikkaji(id):
     pass
+
 
 def export_bindingdb(id):
     pass
 
+
 def export_comptox(id):
     pass
+
 
 def export_lipidmaps(id):
     pass
 
+
 def export_drugcentral(id):
     pass
+
 
 def export_carotenoiddb(id):
     pass
 
+
 def export_metabolights(id):
     pass
+
 
 def export_brenda(id):
     pass
 
+
 def export_rhea(id):
     pass
+
 
 def export_chemicalbook(id):
     pass
 
+
 def export_swisslipids(id):
     pass
+
 
 def export_dailymed(id):
     pass
 
+
 def export_clinicaltrials(id):
     pass
+
 
 def export_rxnorm(id):
     pass
 
+
 def export_MedChemExpress(id):
     pass
 
+
 def export_probes_and_drugs(id):
     pass
+
 
 DATABASE_DICT = {
     'chembl': export_chembl,
@@ -233,9 +283,15 @@ DATABASE_DICT = {
     'probes_and_drugs': export_probes_and_drugs
 }
 
+
 def export_database(database_name, id):
     database_df = DATABASE_DICT[database_name](id)
     try:
-        return database_df.to_dict()
+        logging.info(f"Processing {database_name} -  {id}")
+        d = database_df.to_dict()
+        logging.info(f"{database_name} -  {id} processed correctly")
+        return d
+    except AttributeError:
+        logging.warning(f"{database_name} not implemented yet")
     except Exception as e:
-        print(e, database_name, id)
+        logging.error(f"{e} - {database_name} -  {id}")
