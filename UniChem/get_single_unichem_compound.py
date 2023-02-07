@@ -47,3 +47,31 @@ for unichem_id in tqdm(idx_list):
     except Exception as e:
         print('EXCEPTION: ', e)
         incorrect.append(unichem_id)
+
+# +
+compound_name = "thymol" #"thymol", "putrescine", "carboxymethylcellulose"
+data = {
+  "compound": compound_name,
+  "type": "name"
+}
+response = requests.post(url, json=data, headers = headers)
+res = json.loads(response.text)
+compounds = res['compounds']
+if res['response'] != 'Not found':
+    sources_dict = dict.fromkeys(sources, '')
+    sources_dict['uci'] = compounds[0]['uci']
+    for c in compounds:
+        compound_sources = c['sources']
+        for s in compound_sources:
+            sources_dict[s['shortName']] = s['compoundId']
+else:
+    sources_dict = {}
+    
+sources_dict
+# -
+
+df_dictionary = pd.DataFrame([sources_dict])
+df = pd.concat([df, df_dictionary], ignore_index=True)
+df.to_csv(f'{compound_name}.csv', index=None)
+
+
