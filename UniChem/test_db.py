@@ -12,11 +12,13 @@ if __name__ == '__main__':
     #id = ''
     #database = 'nikkaji'
     #id = ''
-    database_name = 'chebi'
-    id = '3612'
+    #database_name = 'chebi'
+    #id = '3612'
+    database_name = 'cas-rn'
+    id = '9000-01-5'
     database = export_database(database_name, id)
 
     compound_dict = {}
-    compound_dict['chebi'] = database
+    compound_dict[database_name] = database
     with open(f"generated_json/test.json", 'w') as fp:
         json.dump(compound_dict, fp)
