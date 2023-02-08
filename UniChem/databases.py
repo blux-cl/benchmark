@@ -40,5 +40,6 @@ DATABASE_DICT = {
     'clinicaltrials': export_clinicaltrials,
     'rxnorm': export_rxnorm,
     'MedChemExpress': export_MedChemExpress,
-    'probes_and_drugs': export_probes_and_drugs
+    'probes_and_drugs': export_probes_and_drugs,
+    'fda': export_fda,
 }

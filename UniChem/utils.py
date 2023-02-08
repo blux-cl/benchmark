@@ -4,6 +4,12 @@ from libchebipy import ChebiEntity
 import pubchempy as pcp
 from Bio.KEGG import REST
 import logging
+
+s = pd.read_csv("SCOGS_filtered.csv")
+f = pd.read_csv("food_substances_filtered.csv")
+i = pd.read_csv("indirect_additives_filtered.csv")
+
+
 logging.basicConfig(filename='logs/utils.log',
                     filemode='a',
                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
@@ -239,6 +245,29 @@ def export_MedChemExpress(id):
 def export_probes_and_drugs(id):
     pass
 
+def export_fda(id):
+    df = pd.DataFrame()
+    found_s = s[s['cas_rn'] == id]
+    found_s = found_s[found_s['syns'].apply(lambda x: isinstance(x, str))]
+    found_f = f[f['cas_rn'] == id]
+    found_i = i[i['cas_rn'] == id]
+    df = pd.concat([found_s, found_f, found_i])
+    df = df.groupby('cas_rn', as_index=False).agg({
+        'cas_rn' : 'first',
+        'substance' : ', '.join,
+        'report_num': 'first',
+        'syns': ', '.join,
+        'conclusion': 'first',
+        'regs': 'first',
+        'used_for': 'first',
+        'FEMA No': 'first',
+        'GRAS Pub No': 'first',
+        'Most Recent GRAS Pub Update': 'first',
+        'FEMA status': 'first',
+        'JECFA Flavor Number': 'first',
+    })
+    return df
+
 
 DATABASE_DICT = {
     'chembl': export_chembl,
@@ -280,11 +309,13 @@ DATABASE_DICT = {
     'clinicaltrials': export_clinicaltrials,
     'rxnorm': export_rxnorm,
     'MedChemExpress': export_MedChemExpress,
-    'probes_and_drugs': export_probes_and_drugs
+    'probes_and_drugs': export_probes_and_drugs,
+    'fda': export_fda,
 }
 
 
 def export_database(database_name, id):
+    if database_name == 'cas-rn': database_name = 'fda'
     database_df = DATABASE_DICT[database_name](id)
     try:
         logging.info(f"Processing {database_name} -  {id}")
