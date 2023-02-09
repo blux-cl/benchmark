@@ -22,7 +22,6 @@ df = pd.DataFrame([], columns=sources)
 idx_list = [160000]
 
 for unichem_id in tqdm(idx_list):
-    print(unichem_id)
     data = {
       "compound": str(unichem_id),
       "type": "uci"
@@ -45,7 +44,6 @@ for unichem_id in tqdm(idx_list):
         else:
             incorrect.append(unichem_id)
     except Exception as e:
-        print('EXCEPTION: ', e)
         incorrect.append(unichem_id)
 
 # +

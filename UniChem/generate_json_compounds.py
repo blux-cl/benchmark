@@ -16,6 +16,5 @@ if __name__ == '__main__':
             else:
                 if database_name == 'uci':
                     uci = int(id)
-                    print(uci)
         with open(f"generated_json/{uci}.json", 'w') as fp:
             json.dump(compound_dict, fp)
