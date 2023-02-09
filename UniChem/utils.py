@@ -77,6 +77,9 @@ def export_chebi(id):
     charge = chebi_entity.get_charge()
     comments = chebi_entity.get_comments()
     compound_origins = chebi_entity.get_compound_origins()
+    compound_origins = [{"species_text": c.get_species_text(), "source_accession": c.get_source_accession(
+    ), "source_type": c.get_source_type(), "component_text": c.get_component_text(), "source_type": c.get_source_type(),
+    "source_accession":c.__dict__['_CompoundOrigin__source_accession'], "comments": c.get_comments()} for c in compound_origins]
     created_by = chebi_entity.get_created_by()
     db_accessions = chebi_entity.get_database_accessions()
     db_accessions = [{"type": d.get_type(), "accession_number": d.get_accession_number(
@@ -251,20 +254,39 @@ def export_fda(id):
     found_f = f[f['cas_rn'] == id]
     found_i = i[i['cas_rn'] == id]
     df = pd.concat([found_s, found_f, found_i])
-    df = df.groupby('cas_rn', as_index=False).agg({
-        'cas_rn' : 'first',
-        'substance' : ', '.join,
-        'report_num': 'first',
-        'syns': ', '.join,
-        'conclusion': 'first',
-        'regs': 'first',
-        'used_for': 'first',
-        'FEMA No': 'first',
-        'GRAS Pub No': 'first',
-        'Most Recent GRAS Pub Update': 'first',
-        'FEMA status': 'first',
-        'JECFA Flavor Number': 'first',
-    })
+    try:
+        df = df.groupby('cas_rn', as_index=False).agg({
+            'cas_rn' : 'first',
+            'substance' : ', '.join,
+            'report_num': 'first',
+            'syns': ', '.join,
+            'conclusion': 'first',
+            'regs': 'first',
+            'used_for': 'first',
+            'FEMA No': 'first',
+            'GRAS Pub No': 'first',
+            'Most Recent GRAS Pub Update': 'first',
+            'FEMA status': 'first',
+            'JECFA Flavor Number': 'first',
+        })
+    except KeyError:
+        if 'conclusion' in df.columns:
+            df = df.groupby('cas_rn', as_index=False).agg({
+                'cas_rn' : 'first',
+                'substance' : ', '.join,
+                'report_num': 'first',
+                'syns': ', '.join,
+                'conclusion': 'first',
+                'regs': 'first',
+                'used_for': 'first',
+                'FEMA No': 'first',
+                'GRAS Pub No': 'first',
+                'Most Recent GRAS Pub Update': 'first',
+                'FEMA status': 'first',
+                'JECFA Flavor Number': 'first',
+            })
+        else:
+            return df       
     return df
 
 
@@ -314,9 +336,10 @@ DATABASE_DICT = {
 
 
 def export_database(database_name, id):
-    if database_name == 'cas_rn': database_name = 'fda'
-    database_df = DATABASE_DICT[database_name](id)
+    if database_name == 'cas_rn':
+        database_name = 'fda'
     try:
+        database_df = DATABASE_DICT[database_name](id)
         logging.info(f"Processing {database_name} -  {id}")
         d = database_df.to_dict()
         logging.info(f"{database_name} -  {id} processed correctly")
