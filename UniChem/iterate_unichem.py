@@ -2,7 +2,12 @@ import requests
 import json
 import time
 import pandas as pd
-from tqdm import tqdm
+import logging
+
+logging.basicConfig(filename='iterate.log',
+                    filemode='a',
+                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                    datefmt='%H:%M:%S', level=logging.DEBUG)
 
 unichem_ids = list(range(20000000))
 unichem_ids = [str(x) for x in unichem_ids]
@@ -23,12 +28,13 @@ correct, incorrect = [], []
 df = pd.DataFrame([], columns=sources)
 min_idx = 500000
 max_idx = 1000000
-for unichem_id in tqdm(unichem_ids[min_idx:max_idx]):
+for unichem_id in unichem_ids[min_idx:max_idx]:
     data = {
       "compound": unichem_id,
       "type": "uci"
     }
     try:
+        logging.info(f"Processing {unichem_id} id")
         response = requests.post(url, json=data, headers = headers)
         res = json.loads(response.text)
         compounds = res['compounds']
@@ -43,8 +49,10 @@ for unichem_id in tqdm(unichem_ids[min_idx:max_idx]):
             df_dictionary = pd.DataFrame([sources_dict])
             df = pd.concat([df, df_dictionary], ignore_index=True)
             df.to_csv(f'unichem_master_ids[{min_idx}-{max_idx}].csv', index=None)
+            logging.info(f"{unichem_id} id processed correctly")
         else:
+            logging.warning(f"{unichem_id} id not found")
             incorrect.append(unichem_id)
     except Exception as e:
-        print('EXCEPTION: ', e)
+        logging.error(f"{e} - Error processing with {unichem_id}")
         incorrect.append(unichem_id)
