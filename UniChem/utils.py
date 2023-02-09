@@ -76,10 +76,12 @@ def export_chebi(id):
     ), "source": n.get_source(), "language": n.get_language()} for n in names]
     charge = chebi_entity.get_charge()
     comments = chebi_entity.get_comments()
+    comments = [{"datatype_id": c.get_datatype_id(), "datatype": c.get_datatype(),
+                 "text": c.get_text(), "created_on": c.get_created_on()} for c in comments]
     compound_origins = chebi_entity.get_compound_origins()
     compound_origins = [{"species_text": c.get_species_text(), "source_accession": c.get_source_accession(
     ), "source_type": c.get_source_type(), "component_text": c.get_component_text(), "source_type": c.get_source_type(),
-    "source_accession":c.__dict__['_CompoundOrigin__source_accession'], "comments": c.get_comments()} for c in compound_origins]
+        "source_accession": c.__dict__['_CompoundOrigin__source_accession'], "comments": c.get_comments()} for c in compound_origins]
     created_by = chebi_entity.get_created_by()
     db_accessions = chebi_entity.get_database_accessions()
     db_accessions = [{"type": d.get_type(), "accession_number": d.get_accession_number(
@@ -247,6 +249,7 @@ def export_MedChemExpress(id):
 def export_probes_and_drugs(id):
     pass
 
+
 def export_fda(id):
     df = pd.DataFrame()
     found_s = s[s['cas_rn'] == id]
@@ -256,8 +259,8 @@ def export_fda(id):
     df = pd.concat([found_s, found_f, found_i])
     try:
         df = df.groupby('cas_rn', as_index=False).agg({
-            'cas_rn' : 'first',
-            'substance' : ', '.join,
+            'cas_rn': 'first',
+            'substance': ', '.join,
             'report_num': 'first',
             'syns': ', '.join,
             'conclusion': 'first',
@@ -272,8 +275,8 @@ def export_fda(id):
     except KeyError:
         if 'conclusion' in df.columns:
             df = df.groupby('cas_rn', as_index=False).agg({
-                'cas_rn' : 'first',
-                'substance' : ', '.join,
+                'cas_rn': 'first',
+                'substance': ', '.join,
                 'report_num': 'first',
                 'syns': ', '.join,
                 'conclusion': 'first',
@@ -286,7 +289,7 @@ def export_fda(id):
                 'JECFA Flavor Number': 'first',
             })
         else:
-            return df       
+            return df
     return df
 
 
