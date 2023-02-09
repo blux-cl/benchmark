@@ -61,7 +61,6 @@ def export_kegg_ligand(id):
 
 
 def export_chebi(id):
-    print(id)
     columns = ['id', 'name', 'names', 'charge', 'comments', 'compound_origins', 'created_by', 'db_accessions',
                'definition', 'formula', 'formulae', 'inchi', 'inchi_key', 'incomings', 'mass',
                'modified_on', 'mol', 'outgoings', 'references', 'parent_id',
@@ -315,7 +314,7 @@ DATABASE_DICT = {
 
 
 def export_database(database_name, id):
-    if database_name == 'cas-rn': database_name = 'fda'
+    if database_name == 'cas_rn': database_name = 'fda'
     database_df = DATABASE_DICT[database_name](id)
     try:
         logging.info(f"Processing {database_name} -  {id}")
