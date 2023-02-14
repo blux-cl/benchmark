@@ -2,6 +2,7 @@ import numpy as np
 import json
 import pandas as pd
 from utils import export_database
+from os.path import exists
 
 if __name__ == '__main__':
     
@@ -9,6 +10,7 @@ if __name__ == '__main__':
     
     compound_dict = {}
     for compound in unichem.iterrows():
+        file_exist = False
         for database_name, id in compound[1].items():
             if (type(id) == str) or (type(id) == np.float64 and not np.isnan(id)) or (database_name == 'chebi' and not np.isnan(id)):
                 database = export_database(database_name, id)
@@ -16,5 +18,9 @@ if __name__ == '__main__':
             else:
                 if database_name == 'uci':
                     uci = int(id)
-        with open(f"generated_json/{uci}.json", 'w') as fp:
-            json.dump(compound_dict, fp)
+                    if exists(f"generated_json/{uci}.json"):
+                        file_exist = True
+                        break
+        if not file_exist:
+            with open(f"generated_json/{uci}.json", 'w') as fp:
+                json.dump(compound_dict, fp)
