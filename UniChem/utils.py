@@ -339,7 +339,7 @@ DATABASE_DICT = {
 
 
 def export_database(database_name, id):
-    if database_name == 'cas_rn':
+    if database_name == 'cas_rn' or database_name == 'CAS-RN':
         database_name = 'fda'
     try:
         database_df = DATABASE_DICT[database_name](id)
