@@ -74,7 +74,7 @@ for unichem_id in unichem_ids[min_idx:max_idx]:
             if is_cas:
                 sources_dict['cas_rn'] = cas_rn
             if not is_cas:
-                sources_dict[s['cas_rn']] = ''
+                sources_dict['cas_rn'] = ''
             correct.append(unichem_id)
             df_dictionary = pd.DataFrame([sources_dict])
             df = pd.concat([df, df_dictionary], ignore_index=True)
