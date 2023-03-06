@@ -69,6 +69,8 @@ def export_chebi(id):
     df = pd.DataFrame([], columns=columns)
     if isinstance(id, float):
         id = str(int(id))
+    if isinstance(id, int):
+        id = str(id)
     chebi_entity = ChebiEntity(chebi_id=id)
     name = chebi_entity.get_name()
     names = chebi_entity.get_names()
@@ -76,8 +78,8 @@ def export_chebi(id):
     ), "source": n.get_source(), "language": n.get_language()} for n in names]
     charge = chebi_entity.get_charge()
     comments = chebi_entity.get_comments()
-    comments = [{"datatype_id": c.get_datatype_id(), "datatype": c.get_datatype(),
-                 "text": c.get_text(), "created_on": c.get_created_on()} for c in comments]
+    comments = [{"datatype_id": c.__dict__['_Comment__datatype_id'], "datatype": c.get_datatype(),
+                 "text": c.get_text(), "created_on": c.get_created_on().strftime("%m/%d/%Y")} for c in comments]
     compound_origins = chebi_entity.get_compound_origins()
     compound_origins = [{"species_text": c.get_species_text(), "source_accession": c.get_source_accession(
     ), "source_type": c.get_source_type(), "component_text": c.get_component_text(), "source_type": c.get_source_type(),
