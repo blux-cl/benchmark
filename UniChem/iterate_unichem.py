@@ -61,6 +61,7 @@ for unichem_id in unichem_ids[min_idx:max_idx]:
                 compound_sources = c['sources']
                 for s in compound_sources:
                     sources_dict[s['shortName']] = s['compoundId']
+                    logging.info(f"s['shortName']: {s['compoundId']}")
                     if s['shortName'] == 'chebi':
                         chebi_id = s['compoundId']
                         chebi = export_chebi(chebi_id)
@@ -73,6 +74,7 @@ for unichem_id in unichem_ids[min_idx:max_idx]:
                             is_cas = True
             if is_cas:
                 sources_dict['cas_rn'] = cas_rn
+                logging.info(f"cas_rn: {cas_rn}")
             if not is_cas:
                 sources_dict['cas_rn'] = ''
             correct.append(unichem_id)
